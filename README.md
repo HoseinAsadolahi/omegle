@@ -4,6 +4,7 @@
 - run `cd omegle`
 - run `code .`
 - now in first line change the `YOUR_IP` to the ip address of your device. use ipconfig command.
+- run `npm install`
 - run `node server.js`
 - go to the `https://YOUR_IP:3000`.
 
