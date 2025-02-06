@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random Video Chat</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="name-page" class="page">
+            <h1>Welcome to Random Chat!</h1>
+            <input type="text" id="username" placeholder="Enter your name" required>
+            <button onclick="startChat()">Let's Chat!</button>
+        </div>
+        <div id="waiting-page" class="page">
+            <h1 id="status">Hello <span id="display-name"></span>!</h1>
+            <div>Waiting for users...</div>
+            <div class="dots">
+                <span>.</span><span>.</span><span>.</span>
+            </div>
+        </div>
+        <div id="video-page" class="page">
+            <div class="container">
+                <div id="video-container">
+                    <div class="video">
+                        <div class="username">You: <span id="local-username"></span></div>
+                        <video id="localVideo" autoplay muted></video>
+                    </div>
+                    <div class="video">
+                        <div class="username">Partner: <span id="remote-username"></span></div>
+                        <video id="remoteVideo" autoplay></video>
+                    </div>
+                </div>
+                <div id="chat-box"></div>
+                <input type="text" id="message-input" placeholder="Type your message...">
+                <div>
+                    <button id="mute-remote" class="btn" onclick="mute()">Mute</button>
+                    <button class="btn" onclick="sendMessage()">Send</button>
+                    <button class="btn" onclick="skip()">Skip</button>
+                </div>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="client.js"></script>
+    </body>
+</html>
