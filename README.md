@@ -1,6 +1,6 @@
 # How to run
 - open a command line
-- run `git clone github.com/hoseinAsadolahi/omegle`
+- run `git clone https://github.com/HoseinAsadolahi/omegle`
 - run `cd omegle`
 - run `code .`
 - now in first line change the `YOUR_IP` to the ip address of your device. use ipconfig command.
